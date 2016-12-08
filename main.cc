@@ -4,9 +4,13 @@
 
 #include "main.h"
 
+static sf::RenderWindow w1(sf::VideoMode(default_x, default_y), "Let's start");
+static sf::Event event;
+
 /**<function to setup all the variables to make the whole program works properly.*/
 void setup(){
-
+    init_menu();
+    //w1.setFramerateLimit(23);
 }
 
 /** the main function is the first executed after the launch of the program.
@@ -14,12 +18,10 @@ void setup(){
   * to report an error.
   */
 int main(){
-    sf::RenderWindow window(sf::VideoMode(default_x, default_y), "Let's start");
-    window.setFramerateLimit(23);
-    sf::Event event;
+    setup();
 
-    while(window.isOpen()){
-        while(window.pollEvent(event)){
+    while(w1.isOpen()){
+        while(w1.pollEvent(event)){
 
             switch (event.type){
                 case sf::Event::KeyReleased:
@@ -30,22 +32,30 @@ int main(){
                       case sf::Keyboard::Down:
                           move_down();
                           break;
+                      case sf::Keyboard::Return:
+                          if(getPressedItem() == 0){
+                              DEB("play");
+                          }else if(getPressedItem() == 1){
+                              DEB("options");
+                          }else if(getPressedItem() == 2)
+                              w1.close();
+                          break;
                       default:
                           break;
                     }
                     break;
 
                 case sf::Event::Closed:
-                    window.close();
+                    w1.close();
                     break;
                 default:
                     break;
             }
         }
 
-        window.clear();
-        show_menu(window);
-        window.display();
+        w1.clear();
+        show_menu(w1);
+        w1.display();
     }
 
     return 0;

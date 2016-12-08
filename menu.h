@@ -15,5 +15,6 @@ void init_menu();
 void show_menu(sf::RenderWindow &window);
 void move_up();
 void move_down();
+int getPressedItem();
 
 #endif
