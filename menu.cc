@@ -5,10 +5,13 @@
 #include "menu.h"
 
 void init_menu(){
+
+    sf::Font font;
+    sf::Text menu[items_number];
+    int selected_item = 0;
+
     if(!font.loadFromFile("arial.ttf"))
         DEB("Failed to set font");
-
-    selected_item = 0;
 
     menu[0].setFont(font);
     menu[0].setColor(sf::Color::Red);

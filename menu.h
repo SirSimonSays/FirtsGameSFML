@@ -10,9 +10,6 @@
 #include "data_structure.h"
 
 const int items_number = 3;
-static sf::Font font;
-static sf::Text menu[items_number];
-static int selected_item;
 
 void init_menu();
 void show_menu(sf::RenderWindow &window);
