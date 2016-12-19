@@ -1,0 +1,8 @@
+data_structure.o: data_structure.cc data_structure.h
+game_manager.o: game_manager.cc game_manager.h debug.h data_structure.h \
+ menu.h
+key_handler.o: key_handler.cc key_handler.h debug.h data_structure.h \
+ game_manager.h menu.h
+main.o: main.cc main.h game_manager.h debug.h data_structure.h menu.h \
+ key_handler.h
+menu.o: menu.cc menu.h debug.h data_structure.h
