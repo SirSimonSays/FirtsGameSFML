@@ -1,3 +1,0 @@
-data_structure.o: data_structure.cc data_structure.h
-main.o: main.cc main.h data_structure.h menu.h
-menu.o: menu.cc menu.h data_structure.h
