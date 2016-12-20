@@ -20,25 +20,25 @@ static point random_arr[PLATFORMS_NUMBER];
 void init_render(){
 
     /**< charge the player image and set the initial position.*/
-    if(!tChar.loadFromFile("../media/sCharacter.png"))
+    if(!tPlayer.loadFromFile("../media/sPlayer.png"))
         DEB("errore nel caricare l'immmagine del personaggio");
 
-    sPlayer.setTexture(tChar);
-    sPlayer.setTextureRect(IntRect(40, 0, 40, 40));
-    sPlayer.setOrigin(20, 20);
+    sPlayer.setTexture(tPlayer);
+    sPlayer.setTextureRect(sf::IntRect(40, 0, 40, 40));
+    sPlayer.setOrigin(DEFAULT_X / 2, 20);
 
     /**< charge the background image.*/
     if(!tBackground.loadFromFile("../media/sBackground.png"))
         DEB("errore nel caricare l'immmagine dello sfondo");
 
     sBackground.setTexture(tBackground);
+    sBackground.setTextureRect(sf::IntRect(0, 0, DEFAULT_X, DEFAULT_Y));
 
     /**< charge the platform image.*/
     if(!tPlatform.loadFromFile("../media/sPlatform.png"))
-        DEB("errore nel caricare l'immmagine delle barre");
+        DEB("errore nel caricare l'immmagine delle piattaforme");
 
     sPlatform.setTexture(tPlatform);
-
     random_platform();
 }
 
@@ -57,7 +57,7 @@ void random_platform(){
   */
 void update_render(sf::RenderWindow &window){
     window.clear();
-    window.draw(sBackground)
+    window.draw(sBackground);
     window.draw(sPlayer);
 
     for(int i = 0; i < PLATFORMS_NUMBER; i++){

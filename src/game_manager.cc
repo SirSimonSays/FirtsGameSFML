@@ -32,7 +32,7 @@ void change_state(gameState s){
 void update_game(sf::RenderWindow &window){
     switch (state){
       case PLAY:
-          DEB("play");
+          update_render(window);
           break;
       case MENU:
           update_menu(window);
