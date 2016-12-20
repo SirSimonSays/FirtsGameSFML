@@ -16,6 +16,12 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
       case sf::Keyboard::Down:
           move_down(get_state());
           break;
+      case sf::Keyboard::Left:
+          move_player('l');
+          break;
+      case sf::Keyboard::Right:
+          move_player('r');
+          break;
       case sf::Keyboard::Escape:
           change_state(MENU);
           break;

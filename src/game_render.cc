@@ -1,5 +1,5 @@
 /** in this files there are the implementation of the functions of the ::game_render.h
-  * file like ::init_render(), ::update_render(), ::() and ::().
+  * file like ::init_render(), ::random_platform(), ::update_render() and ::move_player().
   */
 
 #include "game_render.h"
@@ -20,12 +20,12 @@ static point random_arr[PLATFORMS_NUMBER];
 void init_render(){
 
     /**< charge the player image and set the initial position.*/
-    if(!tPlayer.loadFromFile("../media/sPlayer.png"))
+    if(!tPlayer.loadFromFile("../media/prova.png"))
         DEB("errore nel caricare l'immmagine del personaggio");
 
     sPlayer.setTexture(tPlayer);
-    sPlayer.setTextureRect(sf::IntRect(40, 0, 40, 40));
-    sPlayer.setOrigin(DEFAULT_X / 2, 20);
+    sPlayer.setPosition(DEFAULT_X / 2, 20);
+    //sPlayer.setTextureRect(sf::IntRect(40, 0, 40, 40));
 
     /**< charge the background image.*/
     if(!tBackground.loadFromFile("../media/sBackground.png"))
@@ -66,4 +66,16 @@ void update_render(sf::RenderWindow &window){
     }
 
     window.display();
+}
+
+/**
+  *
+  */
+void move_player(char c){
+    if(c == 'l'){
+        sPlayer.setPosition();
+    }else{
+        sPlayer.setPosition();
+    }
+
 }
