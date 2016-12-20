@@ -13,6 +13,7 @@ void init_game(){
     srand(time(NULL));
     state = MENU;
     init_menu();
+    init_render();
 }
 
 /**< it returns the value of the state variables.*/
@@ -25,7 +26,7 @@ void change_state(gameState s){
     state = s;
 }
 
-/** this function updates the whole game depending on the state of it. It uses a 
+/** this function updates the whole game depending on the state of it. It uses a
   * switch element to select the different things to do according on the state.
   */
 void update_game(sf::RenderWindow &window){

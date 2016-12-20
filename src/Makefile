@@ -3,7 +3,7 @@
 # either from terminal. This particular ::Makefile uses some variable to make
 # short the whole file and minimize the code lines.
 
-OBJS = data_structure.o menu.o game_manager.o key_handler.o main.o
+OBJS = data_structure.o menu.o game_manager.o game_render.o key_handler.o main.o
 EXNAME = exe
 CXXFLAGS = -c -Wall
 LDFLAGS = -lsfml-graphics -lsfml-window -lsfml-system

@@ -9,6 +9,7 @@
 #include "debug.h"
 #include "data_structure.h"
 #include "menu.h"
+#include "game_render.h"
 
 void init_game();
 gameState get_state();
