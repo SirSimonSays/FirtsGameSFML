@@ -10,6 +10,7 @@
 #include "data_structure.h"
 
 const int PLATFORMS_NUMBER = 10;
+const int PLAYER_DIMENSION = 40;
 
 void init_render();
 void random_platform();

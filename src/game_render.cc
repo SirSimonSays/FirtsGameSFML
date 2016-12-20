@@ -16,16 +16,19 @@ struct point{
 static sf::Texture tPlayer, tPlatform, tBackground;
 static sf::Sprite sPlayer, sPlatform, sBackground;
 static point random_arr[PLATFORMS_NUMBER];
+static point player_position;
 
 void init_render(){
 
     /**< charge the player image and set the initial position.*/
-    if(!tPlayer.loadFromFile("../media/prova.png"))
+    if(!tPlayer.loadFromFile("../media/sPlayer.png"))
         DEB("errore nel caricare l'immmagine del personaggio");
 
+    player_position.x = DEFAULT_X / 2;
+    player_position.y = 20;
     sPlayer.setTexture(tPlayer);
-    sPlayer.setPosition(DEFAULT_X / 2, 20);
-    //sPlayer.setTextureRect(sf::IntRect(40, 0, 40, 40));
+    sPlayer.setPosition(player_position.x, player_position.y);
+    sPlayer.setTextureRect(sf::IntRect(200, 160, PLAYER_DIMENSION, PLAYER_DIMENSION));
 
     /**< charge the background image.*/
     if(!tBackground.loadFromFile("../media/sBackground.png"))
@@ -72,10 +75,10 @@ void update_render(sf::RenderWindow &window){
   *
   */
 void move_player(char c){
-    if(c == 'l'){
-        sPlayer.setPosition();
-    }else{
-        sPlayer.setPosition();
-    }
+    // if(c == 'l'){
+    //     sPlayer.setPosition();
+    // }else{
+    //     sPlayer.setPosition();
+    // }
 
 }
