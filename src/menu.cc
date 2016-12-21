@@ -66,6 +66,12 @@ void init_menu(){
   */
 void update_menu(sf::RenderWindow &window){
 
+    /** condition to check if the game is already started and change the label of
+      * the menu from play to resume.
+      */
+    if(resume_flag)
+        menu[0].setString("Resume");
+
     window.clear();
     window.draw(sMenu);
 

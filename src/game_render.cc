@@ -9,6 +9,8 @@ struct point{
     int x,y;
 };
 
+bool resume_flag, game_over;
+
 /** declaration of the three main image of the game.
   * ::random_arr stores random position to draw platforms with rando position
   * on the screen.
@@ -17,6 +19,8 @@ static sf::Texture tPlayer, tPlatform, tBackground;
 static sf::Sprite sPlayer, sPlatform, sBackground;
 static point random_arr[PLATFORMS_NUMBER];
 static point player_position;
+static float dx, dy;
+
 
 void init_render(){
 
@@ -24,6 +28,8 @@ void init_render(){
     if(!tPlayer.loadFromFile("../media/sPlayer.png"))
         DEB("errore nel caricare l'immmagine del personaggio");
 
+    dx = 0;
+    dy = 0;
     player_position.x = DEFAULT_X / 2;
     player_position.y = 20;
     sPlayer.setTexture(tPlayer);
@@ -43,6 +49,9 @@ void init_render(){
 
     sPlatform.setTexture(tPlatform);
     random_platform();
+
+    resume_flag = false;
+    game_over = false;
 }
 
 /** ::random_platform() makes random number for the position of the platform
@@ -59,8 +68,21 @@ void random_platform(){
   *
   */
 void update_render(sf::RenderWindow &window){
+    resume_flag = true;
     window.clear();
     window.draw(sBackground);
+
+    /** the gravity acceleration*/
+    dy += 0.2;
+    player_position.y += dy;
+    if(player_position.y > DEFAULT_Y - PLAYER_DIMENSION){
+        sPlayer.setTextureRect(sf::IntRect(0, 0, PLAYER_DIMENSION, PLAYER_DIMENSION));
+        game_over = true;
+        dy = 0;
+    }
+    collision();
+
+    sPlayer.setPosition(player_position.x, player_position.y);
     window.draw(sPlayer);
 
     for(int i = 0; i < PLATFORMS_NUMBER; i++){
@@ -71,14 +93,24 @@ void update_render(sf::RenderWindow &window){
     window.display();
 }
 
-/**
-  *
+/** function that allows to move the player left or right. It also checks if
+  * the player goes out of the window.
   */
 void move_player(char c){
-    // if(c == 'l'){
-    //     sPlayer.setPosition();
-    // }else{
-    //     sPlayer.setPosition();
-    // }
+    if(c == 'l' && player_position.x > 3){
+        player_position.x -= 6;
+    }else{
+        if(player_position.x < DEFAULT_X - PLAYER_DIMENSION)
+            player_position.x += 6;
+    }
+}
 
+/** this function checks if the player collide with the platforms
+  *
+  */
+void collision(){
+    for(int i = 0; i < PLATFORMS_NUMBER; i++){
+        if(sPlayer.getGlobalBounds().intersects(sPlatform.getGlobalBounds()))
+            dy = 0;
+    }
 }

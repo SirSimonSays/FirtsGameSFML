@@ -14,6 +14,7 @@ int main(){
 
     sf::RenderWindow window(sf::VideoMode(DEFAULT_X, DEFAULT_Y), "Let's start");
     window.setFramerateLimit(FPS);
+    sf::Time t = sf::seconds(0.01);
     sf::Event event;
 
     init_game();
@@ -35,6 +36,7 @@ int main(){
             }
         }
         update_game(window);
+        sf::sleep(t);
     }
 
     return 0;

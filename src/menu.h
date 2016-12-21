@@ -8,6 +8,7 @@
 
 #include "debug.h"
 #include "data_structure.h"
+#include "game_render.h"
 
 const int ITEMS_NUMBER = 3;
 const int OPTION_ITEMS_NUMBER = 3;
