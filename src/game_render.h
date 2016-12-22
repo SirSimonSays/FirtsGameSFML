@@ -14,12 +14,15 @@ const int PLATFORM_DIMENSION_X = 137;
 const int PLATFORM_DIMENSION_Y = 30;
 const int PLAYER_DIMENSION = 40;
 
+enum player_state {RUN, JUMP, FLY, DEATH};
+
 extern bool resume_flag;
 
 void init_render();
 void random_platform();
 void update_render(sf::RenderWindow &window);
-void move_player(char c);
+void move_player(bool b);
+void animation(player_state p, bool direction);
 void collision();
 
 #endif
