@@ -21,7 +21,7 @@ extern bool resume_flag;
 void init_render();
 void random_platform();
 void update_render(sf::RenderWindow &window);
-void move_player(bool b);
+void move_player(bool dir);
 void animation(player_state p, bool direction);
 void collision();
 

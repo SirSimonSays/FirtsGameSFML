@@ -11,7 +11,7 @@ struct point{
 
 /** ::resume_flag is used to checks if the game is already starts or not.
   * false = NOT START, true = ALREADY START.
-  * ::game_over is used to checks if the user is playing or the he has lost.
+  * ::game_over is used to checks if the user is playing or he has lost.
   * false = PLAY, true = LOST.
   * ::pl_direction is used to stores the direction of the player.
   * false = RIGHT, true = LEFT.
@@ -21,7 +21,9 @@ player_state pl_state;
 
 /** declaration of the three main image of the game.
   * ::random_arr stores random position to draw platforms with random position
-  * on the screen.
+  * on the screen. ::player position stores the position of the player to move
+  * it. The two variables ::dx and ::dy are the changing time, like a little
+  * lapse of time.
   */
 static sf::Texture tPlayer, tPlatform, tBackground;
 static sf::Sprite sPlayer, sPlatform, sBackground;
@@ -29,7 +31,10 @@ static point random_arr[PLATFORMS_NUMBER];
 static point player_position;
 static float dx, dy;
 
-
+/** ::init_render is uses to set at his initial value all the variables of this
+  * file to start to work properly. It also charges all the images and set the
+  * sprites.
+  */
 void init_render(){
 
     /**< charge the player image and set the initial position.*/
@@ -75,8 +80,9 @@ void random_platform(){
     }
 }
 
-/**
-  *
+/** ::update_render is the main function of this file because it's called every
+  * time that the player is moved and makes possible scrolling the backgorund.
+  * It also implements the gravity.
   */
 void update_render(sf::RenderWindow &window){
     resume_flag = true;
@@ -96,6 +102,7 @@ void update_render(sf::RenderWindow &window){
     sPlayer.setPosition(player_position.x, player_position.y);
     window.draw(sPlayer);
 
+/** cycle to draw the ten platforms randomized in the ::random_platform function.*/
     for(int i = 0; i < PLATFORMS_NUMBER; i++){
         sPlatform.setPosition(random_arr[i].x, random_arr[i].y);
         window.draw(sPlatform);
@@ -107,9 +114,9 @@ void update_render(sf::RenderWindow &window){
 /** function that allows to move the player left or right. It also checks if
   * the player goes out of the window.
   */
-void move_player(bool b){
-    if(b && player_position.x > 3){
-        pl_direction = b;
+void move_player(bool dir){
+    if(dir && player_position.x > 3){
+        pl_direction = dir;
         animation(pl_state, pl_direction);
         player_position.x -= 6;
     }else{
@@ -121,20 +128,24 @@ void move_player(bool b){
     }
 }
 
+/**
+  *
+  */
 void animation(player_state p, bool direction){
+/**check if the direction is right or left and switch on the state of the player.*/
     if(!direction){
         switch(p){
           case RUN:
               sPlayer.setTextureRect(sf::IntRect(0, 0, PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case JUMP:
-              sPlayer.setTextureRect(sf::IntRect(0, 40, PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(0, PLAYER_DIMENSION, PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case FLY:
-              sPlayer.setTextureRect(sf::IntRect(0, 80, PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(0, PLAYER_DIMENSION * 2, PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case DEATH:
-              sPlayer.setTextureRect(sf::IntRect(0, 120, PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(0, PLAYER_DIMENSION * 3, PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           default:
               break;
@@ -145,13 +156,13 @@ void animation(player_state p, bool direction){
               sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, 0, -PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case JUMP:
-              sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, 40, -PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, PLAYER_DIMENSION, -PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case FLY:
-              sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, 80, -PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, PLAYER_DIMENSION * 2, -PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           case DEATH:
-              sPlayer.setTextureRect(sf::IntRect(0, 120, PLAYER_DIMENSION, PLAYER_DIMENSION));
+              sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, PLAYER_DIMENSION * 3, -PLAYER_DIMENSION, PLAYER_DIMENSION));
               break;
           default:
               break;

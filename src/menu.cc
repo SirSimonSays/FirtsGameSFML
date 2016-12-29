@@ -18,7 +18,7 @@ static int selected_options_item = ITEMS_NUMBER;
 static sf::Texture tMenu; /**< .*/
 static sf::Sprite sMenu; /**< .*/
 
-/** @init_menu is uses to set the background image of the menu, the font of the
+/** ::init_menu is uses to set the background image of the menu, the font of the
   * menu text and to charges the array ::menu[] of the necessary element.
   */
 void init_menu(){
