@@ -10,7 +10,7 @@
   * Indeed into the two variables ::selected_menu_item and ::selected_options_item
   * are stored the index of the array where the user is on.
   */
-static sf::Font font;
+
 static sf::Text menu[ITEMS_NUMBER + OPTION_ITEMS_NUMBER];
 static int selected_menu_item = 0;
 static int selected_options_item = ITEMS_NUMBER;
@@ -71,6 +71,8 @@ void update_menu(sf::RenderWindow &window){
       */
     if(resume_flag)
         menu[0].setString("Resume");
+    else
+        menu[0].setString("Play");
 
     window.clear();
     window.draw(sMenu);

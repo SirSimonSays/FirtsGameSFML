@@ -6,3 +6,5 @@
 
 const int DEFAULT_X = 1270; /**<default dimension for the width of the windows.*/
 const int DEFAULT_Y = 650;  /**<default dimension for the height of the windows.*/
+
+sf::Font font;

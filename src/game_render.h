@@ -8,10 +8,12 @@
 
 #include "debug.h"
 #include "data_structure.h"
+#include "game_manager.h"
 
 const int PLATFORMS_NUMBER = 10;
 const int PLATFORM_DIMENSION_X = 137;
 const int PLATFORM_DIMENSION_Y = 30;
+const float PLATFORMS_SPEED = 1.8;
 const int PLAYER_DIMENSION = 40;
 
 enum player_state {RUN, JUMP, FLY, DEATH};
@@ -24,5 +26,6 @@ void update_render(sf::RenderWindow &window);
 void move_player(bool dir);
 void animation(player_state p, bool direction);
 void collision();
+void scroll_platforms();
 
 #endif

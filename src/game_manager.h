@@ -10,6 +10,7 @@
 #include "data_structure.h"
 #include "menu.h"
 #include "game_render.h"
+#include "game_over.h"
 
 void init_game();
 gameState get_state();

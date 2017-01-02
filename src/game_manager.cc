@@ -40,6 +40,9 @@ void update_game(sf::RenderWindow &window){
       case OPTION:
           update_option_menu(window);
           break;
+      case OVER:
+          update_game_over(window);
+          break;
       default:
           break;
     }

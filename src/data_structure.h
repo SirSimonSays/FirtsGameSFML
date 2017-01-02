@@ -15,7 +15,9 @@
 extern const int DEFAULT_X;
 extern const int DEFAULT_Y;
 
+extern sf::Font font;
+
 /**< possible state of the game.*/
-enum gameState{PLAY, MENU, OPTION};
+enum gameState{PLAY, MENU, OPTION, OVER};
 
 #endif

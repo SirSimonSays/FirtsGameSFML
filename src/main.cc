@@ -12,7 +12,7 @@ using namespace std;
   */
 int main(){
 
-    sf::RenderWindow window(sf::VideoMode(DEFAULT_X, DEFAULT_Y), "Let's start");
+    sf::RenderWindow window(sf::VideoMode(DEFAULT_X, DEFAULT_Y), "FF - FreeFall");
     window.setFramerateLimit(FPS);
     sf::Time t = sf::seconds(0.01);
     sf::Event event;
