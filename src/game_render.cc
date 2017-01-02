@@ -96,6 +96,8 @@ void update_render(sf::RenderWindow &window){
     dy += 0.2;
     player_position.y += dy;
     collision();
+
+/** let the background slide every 0.01 seconds*/
     if(clock1.getElapsedTime().asSeconds() > 0.01)
         scroll_platforms();
 
