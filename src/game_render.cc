@@ -76,7 +76,7 @@ void init_render(){
 void random_platform(){
     for(int i = 0; i < PLATFORMS_NUMBER; i++){
         random_arr[i].x = rand() % DEFAULT_X;
-        random_arr[i].y = rand() % DEFAULT_Y;
+        random_arr[i].y = rand() % DEFAULT_Y + 200;
     }
 }
 
@@ -128,6 +128,11 @@ void move_player(bool dir){
             player_position.x += 6;
         }
     }
+}
+
+void plane_player(){
+    animation(JUMP, pl_direction);
+    dy = -4;
 }
 
 /**

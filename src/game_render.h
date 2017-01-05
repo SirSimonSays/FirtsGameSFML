@@ -24,6 +24,7 @@ void init_render();
 void random_platform();
 void update_render(sf::RenderWindow &window);
 void move_player(bool dir);
+void plane_player();
 void animation(player_state p, bool direction);
 void collision();
 void scroll_platforms();
