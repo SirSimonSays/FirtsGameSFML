@@ -14,6 +14,8 @@ void init_game(){
     state = MENU;
     init_menu();
     init_render();
+    init_music();
+    init_controls();
 }
 
 /**< it returns the value of the state variables.*/
@@ -22,7 +24,7 @@ gameState get_state(){
 }
 
 /**< it changes the value of state with the parameter s.*/
-void change_state(gameState s){
+void change_game_state(gameState s){
     state = s;
 }
 
@@ -30,7 +32,7 @@ void change_state(gameState s){
   * switch element to select the different things to do according on the state.
   */
 void update_game(sf::RenderWindow &window){
-    switch (state){
+    switch(state){
       case PLAY:
           update_render(window);
           break;
@@ -39,6 +41,9 @@ void update_game(sf::RenderWindow &window){
           break;
       case OPTION:
           update_option_menu(window);
+          break;
+      case CONTROL:
+          view_controls(window);
           break;
       case OVER:
           update_game_over(window);

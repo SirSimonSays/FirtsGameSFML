@@ -10,6 +10,7 @@
 #include "data_structure.h"
 #include "game_manager.h"
 #include "menu.h"
+#include "controls_and_sounds.h"
 
 /**< max number of keys memorizable.*/
 //static const int MAX_KEY = 3;

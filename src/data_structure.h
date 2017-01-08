@@ -8,6 +8,7 @@
 #define DATA_STR_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <cstdlib>
 #include <iostream>
 
@@ -18,6 +19,6 @@ extern const int DEFAULT_Y;
 extern sf::Font font;
 
 /**< possible state of the game.*/
-enum gameState{PLAY, MENU, OPTION, OVER};
+enum gameState{PLAY, MENU, OPTION, CONTROL, OVER};
 
 #endif

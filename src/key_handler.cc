@@ -26,29 +26,32 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
           plane_player();
           break;
       case sf::Keyboard::Escape:
-          change_state(MENU);
+          if(get_state() == CONTROL)
+              change_game_state(OPTION);
+          else
+              change_game_state(MENU);
           break;
       case sf::Keyboard::Return:
           switch(get_pressed_item(get_state())){
             /**< value returned from the main_menu.*/
             case 0:
-                change_state(PLAY);
+                change_game_state(PLAY);
                 break;
             case 1:
-                change_state(OPTION);
+                change_game_state(OPTION);
                 break;
             case 2:
                 window.close();
                 break;
             /**< value returned from the options_menu.*/
             case 3:
-                DEB("volume");
+                switch_music();
                 break;
             case 4:
-                DEB("controls");
+                change_game_state(CONTROL);
                 break;
             case 5:
-                change_state(MENU);
+                change_game_state(MENU);
                 break;
           }
           break;

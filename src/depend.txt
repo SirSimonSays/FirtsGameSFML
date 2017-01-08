@@ -1,12 +1,14 @@
+controls_and_sounds.o: controls_and_sounds.cc controls_and_sounds.h \
+ debug.h data_structure.h
 data_structure.o: data_structure.cc data_structure.h
 game_manager.o: game_manager.cc game_manager.h debug.h data_structure.h \
- menu.h game_render.h game_over.h
+ menu.h game_render.h controls_and_sounds.h game_over.h
 game_over.o: game_over.cc game_over.h debug.h data_structure.h
 game_render.o: game_render.cc game_render.h debug.h data_structure.h \
- game_manager.h menu.h game_over.h
+ game_manager.h menu.h controls_and_sounds.h game_over.h
 key_handler.o: key_handler.cc key_handler.h debug.h data_structure.h \
- game_manager.h menu.h game_render.h game_over.h
+ game_manager.h menu.h game_render.h controls_and_sounds.h game_over.h
 main.o: main.cc main.h game_manager.h debug.h data_structure.h menu.h \
- game_render.h game_over.h key_handler.h
+ game_render.h controls_and_sounds.h game_over.h key_handler.h
 menu.o: menu.cc menu.h debug.h data_structure.h game_render.h \
- game_manager.h game_over.h
+ game_manager.h game_over.h controls_and_sounds.h

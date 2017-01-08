@@ -11,10 +11,11 @@
 #include "menu.h"
 #include "game_render.h"
 #include "game_over.h"
+#include "controls_and_sounds.h"
 
 void init_game();
 gameState get_state();
-void change_state(gameState s);
+void change_game_state(gameState s);
 void update_game(sf::RenderWindow &window);
 
 #endif

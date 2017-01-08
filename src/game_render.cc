@@ -40,7 +40,7 @@ void init_render(){
 
 /** charge the player image and set the initial position.*/
     if(!tPlayer.loadFromFile("../media/sPlayer.png"))
-        DEB("errore nel caricare l'immmagine del personaggio");
+        DEB("error loading player image");
 
     dx = 0;
     dy = 0;
@@ -55,14 +55,14 @@ void init_render(){
 
 /** charge the background image.*/
     if(!tBackground.loadFromFile("../media/sBackground.png"))
-        DEB("errore nel caricare l'immmagine dello sfondo");
+        DEB("error loading background image");
 
     sBackground.setTexture(tBackground);
     sBackground.setTextureRect(sf::IntRect(0, 0, DEFAULT_X, DEFAULT_Y));
 
 /** charge the platform image.*/
     if(!tPlatform.loadFromFile("../media/sPlatform.png"))
-        DEB("errore nel caricare l'immmagine delle piattaforme");
+        DEB("error loading platform image");
 
     sPlatform.setTexture(tPlatform);
     random_platform();
@@ -189,7 +189,7 @@ void collision(){
         animation(DEATH, pl_direction);
         dy = 0;
         resume_flag = false;
-        change_state(OVER);
+        change_game_state(OVER);
     }
 
 /**check if the player collides with the platforms.*/

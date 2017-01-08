@@ -88,6 +88,15 @@ void update_menu(sf::RenderWindow &window){
   * controls and back to menu. This three elements are members of the options menu.
   */
 void update_option_menu(sf::RenderWindow &window){
+
+    /** condition to check if the volume is on or off and change the label of the
+      * option menu from volume: on to volume: off
+      */
+    if(!music_flag)
+        menu[3].setString("Volume: OFF");
+    else
+        menu[3].setString("Volume: ON");
+
     window.clear();
     window.draw(sMenu);
 
