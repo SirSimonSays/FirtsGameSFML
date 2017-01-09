@@ -5,11 +5,15 @@ Assumption:
     of what they do.
 
 Resources:
-    where I choose the sprite of the player: tsgk.captainn.net
-					     tsgk.captainn.net/?p=showsheets&t=cn&cn=18&sec=44 [Mario-Bros]
+    Texture of the player:
+        tsgk.captainn.net
+				tsgk.captainn.net/?p=showsheets&t=cn&cn=18&sec=44 [Mario-Bros]
+    Music for the menu and the game:
+        incompetech.com/music/royalty-free/music.html
     Documentation of SFML: sfml-dev.org/tutorials/2.4/
-			   github.com/SFML/SFML/wiki
-    Obviusly google for some sprite and all the question I had: google.com
+			  github.com/SFML/SFML/wiki
+    Obviusly google for some sprite and all the question I had:
+        google.com
 
 How to play:
   Compile:

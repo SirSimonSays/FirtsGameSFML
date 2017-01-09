@@ -5,15 +5,19 @@
 
 #include "controls_and_sounds.h"
 
-/** flag variable to store the state of the music, if it's power on or off*/
+/** flag variable to store the state of the music, if it's turned on or off*/
 bool music_flag;
 
-/** */
+/** the texture and the sprite for the controls image and also the music for the
+  * menu and the game.
+  */
 static sf::Texture tControls;
 static sf::Sprite sControls;
 static sf::Music musicMenu, musicGame;
 
-/** */
+/** function that opens the two files for playing the music. It also sets the
+  * ::music_flag to true and starts the music depending on the state of the game.
+  */
 void init_music(){
 
     if(!musicMenu.openFromFile("../media/MartyGotsAPlan.ogg"))
@@ -23,32 +27,34 @@ void init_music(){
         DEB("error loading game music");
 
     music_flag = true;
+    musicMenu.setLoop(true);
+    musicGame.setLoop(true);
     update_music(get_state());
 }
 
-/***/
+/** it changes the music depending on the ::gameState and the ::music_flag.
+  * music.getStatus = Get the current status of the stream (stopped, paused, playing)
+  */
 void update_music(gameState state){
     if(music_flag){
         switch(state){
-            case PLAY:
-                musicGame.play();
-                musicMenu.pause();
-                break;
-            case MENU:
-                musicGame.pause();
-                musicMenu.play();
-                break;
-            case OPTION:
-                musicGame.pause();
-                musicMenu.play();
-                break;
-            default:
-                break;
+          case PLAY:
+              musicGame.play();
+              musicMenu.pause();
+              break;
+          //case OVER:
+          default:
+              musicGame.pause();
+              musicMenu.play();
+              break;
         }
     }
 }
 
-/***/
+/** this function is used to switch on and off the music from the options_menu.
+  * It controls if the ::music_flag is true and it stops the music otherwise it
+  * turns it on and sets the ::music_flag to true.
+  */
 void switch_music(){
     if(music_flag){
         musicMenu.pause();
@@ -59,7 +65,9 @@ void switch_music(){
     }
 }
 
-/***/
+/** it loads the image, sets the parameters of the sprite like position and
+  * selects the rectangle of the sprite.
+  */
 void init_controls(){
     if(!tControls.loadFromFile("../media/sControl.jpg"))
         DEB("error loading controls image");
@@ -70,7 +78,7 @@ void init_controls(){
 
 }
 
-/***/
+/** it cleans the screen and draws the ::sControls sprite.*/
 void view_controls(sf::RenderWindow &window){
     window.clear();
     window.draw(sControls);

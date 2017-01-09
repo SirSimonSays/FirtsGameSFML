@@ -1,5 +1,5 @@
 /** in this files there are the implementation of the functions of the ::game_manager.h
-  * file like ::init_game(), ::get_state(), ::change_state() and ::update_game().
+  * file like ::init_game(), ::get_state(), ::change_game_state() and ::update_game().
   */
 
 #include "game_manager.h"
