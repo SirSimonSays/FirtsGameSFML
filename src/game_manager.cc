@@ -26,6 +26,7 @@ gameState get_state(){
 /**< it changes the value of state with the parameter s.*/
 void change_game_state(gameState s){
     state = s;
+    update_music(state);
 }
 
 /** this function updates the whole game depending on the state of it. It uses a

@@ -23,7 +23,7 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
           move_player(false);
           break;
       case sf::Keyboard::LShift:
-          plane_player();
+          glide_player();
           break;
       case sf::Keyboard::Escape:
           if(get_state() == CONTROL)
@@ -33,7 +33,7 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
           break;
       case sf::Keyboard::Return:
           switch(get_pressed_item(get_state())){
-            /**< value returned from the main_menu.*/
+            /** value returned from the main_menu.*/
             case 0:
                 change_game_state(PLAY);
                 break;
@@ -43,7 +43,7 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
             case 2:
                 window.close();
                 break;
-            /**< value returned from the options_menu.*/
+            /** value returned from the options_menu.*/
             case 3:
                 switch_music();
                 break;
@@ -52,6 +52,8 @@ void key_press(sf::RenderWindow &window, sf::Event &event){
                 break;
             case 5:
                 change_game_state(MENU);
+                break;
+            default:
                 break;
           }
           break;

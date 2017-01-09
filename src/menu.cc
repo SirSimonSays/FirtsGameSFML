@@ -15,8 +15,8 @@ static sf::Text menu[ITEMS_NUMBER + OPTION_ITEMS_NUMBER];
 static int selected_menu_item = 0;
 static int selected_options_item = ITEMS_NUMBER;
 
-static sf::Texture tMenu; /**< .*/
-static sf::Sprite sMenu; /**< .*/
+static sf::Texture tMenu; /**< texture for the menu.*/
+static sf::Sprite sMenu;  /**< sprite fot the menu.*/
 
 /** ::init_menu is uses to set the background image of the menu, the font of the
   * menu text and to charges the array ::menu[] of the necessary element.
@@ -27,7 +27,7 @@ void init_menu(){
         DEB("errore nel caricare l'immmagine");
     sMenu.setTexture(tMenu);
 
-    if(!font.loadFromFile("../media/AlexisGrunge.ttf"))
+    if(!font.loadFromFile("../media/font_AlexisGrunge.ttf"))
         DEB("Errore nel caricamento del font");
 
     menu[0].setFont(font);
@@ -114,8 +114,9 @@ void update_option_menu(sf::RenderWindow &window){
 int get_pressed_item(gameState s){
     if(s == MENU)
         return selected_menu_item;
-    else
+    else if(s == OPTION)
         return selected_options_item;
+    return 6;
 }
 
 /** this function allows the user to move up on the three items, if the items
@@ -135,7 +136,7 @@ void move_up(gameState s){
             selected_menu_item = ITEMS_NUMBER - 1;
             menu[selected_menu_item].setColor(sf::Color::Red);
         }
-    }else{
+    }else if(s == OPTION){
         /**< portion of the options_menu*/
         if(selected_options_item - 1 >= ITEMS_NUMBER){
             menu[selected_options_item].setColor(sf::Color::White);
@@ -166,7 +167,7 @@ void move_down(gameState s){
             selected_menu_item = 0;
             menu[selected_menu_item].setColor(sf::Color::Red);
         }
-    }else{
+    }else if(s == OPTION){
         /**< portion of the options_menu*/
         if(selected_options_item + 1 < ITEMS_NUMBER + OPTION_ITEMS_NUMBER){
             menu[selected_options_item].setColor(sf::Color::White);

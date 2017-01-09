@@ -9,43 +9,59 @@
 bool music_flag;
 
 /** the texture and the sprite for the controls image and also the music for the
-  * menu and the game.
+  * menu the game and the game_over.
   */
 static sf::Texture tControls;
 static sf::Sprite sControls;
-static sf::Music musicMenu, musicGame;
+static sf::Music musicMenu, musicGame, musicOver;
 
-/** function that opens the two files for playing the music. It also sets the
+/** function that opens the three files for playing the music. It also sets the
   * ::music_flag to true and starts the music depending on the state of the game.
   */
 void init_music(){
 
-    if(!musicMenu.openFromFile("../media/MartyGotsAPlan.ogg"))
+    if(!musicMenu.openFromFile("../media/musicMenu.ogg"))
         DEB("error loading menu music");
 
-    if(!musicGame.openFromFile("../media/Reformat.ogg"))
+    if(!musicGame.openFromFile("../media/musicGame.ogg"))
+        DEB("error loading game music");
+
+    if(!musicOver.openFromFile("../media/musicOver.ogg"))
         DEB("error loading game music");
 
     music_flag = true;
+    musicGame.setVolume(35);
     musicMenu.setLoop(true);
     musicGame.setLoop(true);
+
     update_music(get_state());
 }
 
 /** it changes the music depending on the ::gameState and the ::music_flag.
-  * music.getStatus = Get the current status of the stream (stopped, paused, playing)
+  * music.getStatus = Get the current status of the stream (stopped, paused, playing).
+  * the playing of a music that is already playing will produce the restarting
+  * of it and into the default case the if checks this problem.
   */
 void update_music(gameState state){
     if(music_flag){
         switch(state){
           case PLAY:
-              musicGame.play();
               musicMenu.pause();
+              musicGame.play();
+              musicOver.stop();
               break;
-          //case OVER:
+          case OVER:
+              musicMenu.pause();
+              musicGame.stop();
+              musicOver.play();
+              break;
           default:
-              musicGame.pause();
-              musicMenu.play();
+              if(musicMenu.getStatus() != 2){
+                  musicMenu.play();
+                  /** depending on the ::resume_flag it pauses or stops the ::musicGame*/
+                  resume_flag ? musicGame.pause() : musicGame.stop();
+                  musicOver.stop();
+              }
               break;
         }
     }
