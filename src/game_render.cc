@@ -159,6 +159,7 @@ void animation(player_state p, bool direction){
     if(!direction)
           sPlayer.setTextureRect(sf::IntRect(0, PLAYER_DIMENSION * pl_state, PLAYER_DIMENSION, PLAYER_DIMENSION));
     else
+          /** technic to flip the sprite*/
           sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, PLAYER_DIMENSION * pl_state, -PLAYER_DIMENSION, PLAYER_DIMENSION));
 }
 

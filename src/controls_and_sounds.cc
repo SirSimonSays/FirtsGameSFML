@@ -11,6 +11,8 @@ bool music_flag;
 /** the texture and the sprite for the controls image and also the music for the
   * menu the game and the game_over.
   */
+static sf::Text flip_text;
+static int i;
 static sf::Texture tControls;
 static sf::Sprite sControls;
 static sf::Music musicMenu, musicGame, musicOver;
@@ -85,12 +87,20 @@ void switch_music(){
   * selects the rectangle of the sprite.
   */
 void init_controls(){
+    i = 0;
+    flip_text.setFont(font);
+    flip_text.setString("Press ESC to return to MENU");
+    flip_text.setColor(sf::Color::White);
+    flip_text.setCharacterSize(30);
+    flip_text.setPosition(DEFAULT_X / 3, DEFAULT_Y - 150);
+
+
     if(!tControls.loadFromFile("../media/sControl.jpg"))
         DEB("error loading controls image");
 
     sControls.setTexture(tControls);
     sControls.setTextureRect(sf::IntRect(0, 0, DEFAULT_X, DEFAULT_Y));
-    sControls.setPosition(DEFAULT_X / 3 - 100, DEFAULT_Y / 3);
+    sControls.setPosition(DEFAULT_X / 3 - 100, DEFAULT_Y / 4);
 
 }
 
@@ -98,5 +108,15 @@ void init_controls(){
 void view_controls(sf::RenderWindow &window){
     window.clear();
     window.draw(sControls);
+
+    /** simple way to make the text flashing on the screen to capture the attention
+      * of the user. i variable starts from 0 and increments by one every cycle,
+      * so the if condition checks whether the number is odd or even.
+      */
+    if(i % 2)
+        window.draw(flip_text);
+    i++;
+
     window.display();
+    sf::sleep(sf::seconds(0.6));
 }

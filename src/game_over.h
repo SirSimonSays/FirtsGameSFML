@@ -1,5 +1,6 @@
 /** this file includes all the other files that will be used into the
   * ::game_over.cc file and declares the functions of this file like
+  * ::update_game_over() and ::().
   */
 
 #ifndef GAME_OVER
