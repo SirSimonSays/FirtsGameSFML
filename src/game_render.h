@@ -1,6 +1,7 @@
 /** this file includes all the other files that will be used into the
   * ::game_render.cc file and declares the functions of this file like
-  * ::init_render() and ::random_platform(), ::update_render() and ::move_player().
+  * ::init_render() and ::random_platform(), ::update_render() and ::move_player(),
+  * ::animation(), ::glide_player(), ::collision(), ::scroll_platforms().
   */
 
 #ifndef GAME_RENDER

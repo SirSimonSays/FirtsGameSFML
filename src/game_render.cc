@@ -1,5 +1,6 @@
 /** in this files there are the implementation of the functions of the ::game_render.h
-  * file like ::init_render(), ::random_platform(), ::update_render() and ::move_player().
+  * file like ::init_render(), ::random_platform(), ::update_render() and ::move_player(),
+  * ::animation(), ::glide_player(), ::collision(), ::scroll_platforms().
   */
 
 #include "game_render.h"
