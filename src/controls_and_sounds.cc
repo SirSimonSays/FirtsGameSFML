@@ -1,4 +1,6 @@
-/** in this files there are the implementation of the functions of the ::controls_and_sounds.h
+/** @file
+  * file that manages audios and game controls.
+  * In this files there are the implementation of the functions of the ::controls_and_sounds.h
   * file like ::init_music(), ::update_music(), ::switch_music(), ::init_controls()
   * and ::view_controls().
   */

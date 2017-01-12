@@ -1,4 +1,6 @@
-/** in this files there are the implementation of the functions of the ::key_handler.h
+/** @file
+  * file that manages the input from keyboard.
+  * In this files there are the implementation of the functions of the ::key_handler.h
   * file like ::key_press(), ::key_release().
   */
 

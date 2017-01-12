@@ -1,4 +1,6 @@
-/** in this files there are the implementation of the functions of the ::menu.h
+/** @file
+  * file that handles the menu and the options_menu.
+  * In this files there are the implementation of the functions of the ::menu.h
   * file like ::show_menu(), ::move_up(), ::move_down().
   */
 

@@ -1,4 +1,6 @@
-/** in this files there are the implementation of the functions of the ::game_render.h
+/** @file
+  * file that includes the main code for the play of the game.
+  * In this files there are the implementation of the functions of the ::game_render.h
   * file like ::init_render(), ::random_platform(), ::update_render() and ::move_player(),
   * ::animation(), ::glide_player(), ::collision(), ::scroll_platforms().
   */
@@ -184,6 +186,7 @@ bool collision(){
         if(sPlayer.getGlobalBounds().intersects(sf::FloatRect(random_arr[i].x, random_arr[i].y, PLATFORM_DIMENSION_X, PLATFORM_DIMENSION_Y))){
             animation(RUN, pl_direction);
             dy = -PLATFORMS_SPEED;
+            update_score();
             return true;
         }
     }

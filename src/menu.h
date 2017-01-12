@@ -6,8 +6,6 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "debug.h"
-#include "data_structure.h"
 #include "game_render.h"
 #include "controls_and_sounds.h"
 

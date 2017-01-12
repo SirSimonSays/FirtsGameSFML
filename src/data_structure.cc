@@ -1,4 +1,6 @@
-/** this file contain the definitions of the variables shared from the other
+/** @file
+  * file that includes all the declaration of the global variables.
+  * This file contain the definitions of the variables shared from the other
   * files. A sort of container of all global variables.
   */
 

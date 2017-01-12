@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['update_5fgame',['update_game',['../game__manager_8cc.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c',1,'update_game(sf::RenderWindow &amp;window):&#160;game_manager.cc'],['../game__manager_8h.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c',1,'update_game(sf::RenderWindow &amp;window):&#160;game_manager.cc']]],
+  ['update_5fgame_5fover',['update_game_over',['../game__over_8cc.html#a7a93ef1a645c37ae5816421f3b414360',1,'update_game_over(sf::RenderWindow &amp;window):&#160;game_over.cc'],['../game__over_8h.html#a7a93ef1a645c37ae5816421f3b414360',1,'update_game_over(sf::RenderWindow &amp;window):&#160;game_over.cc']]],
+  ['update_5fmenu',['update_menu',['../menu_8cc.html#a58bdef10f45dade7616ad29dac8fd0e1',1,'update_menu(sf::RenderWindow &amp;window):&#160;menu.cc'],['../menu_8h.html#a58bdef10f45dade7616ad29dac8fd0e1',1,'update_menu(sf::RenderWindow &amp;window):&#160;menu.cc']]],
+  ['update_5fmusic',['update_music',['../controls__and__sounds_8cc.html#a286032ebcb373c3e119b6b3118041737',1,'update_music(gameState state):&#160;controls_and_sounds.cc'],['../controls__and__sounds_8h.html#a286032ebcb373c3e119b6b3118041737',1,'update_music(gameState state):&#160;controls_and_sounds.cc']]],
+  ['update_5foption_5fmenu',['update_option_menu',['../menu_8cc.html#a37569c0169be2404752af19df4b96735',1,'update_option_menu(sf::RenderWindow &amp;window):&#160;menu.cc'],['../menu_8h.html#a37569c0169be2404752af19df4b96735',1,'update_option_menu(sf::RenderWindow &amp;window):&#160;menu.cc']]],
+  ['update_5frender',['update_render',['../game__render_8cc.html#addcb61d0928591a36e17be9e215a08fa',1,'update_render(sf::RenderWindow &amp;window):&#160;game_render.cc'],['../game__render_8h.html#addcb61d0928591a36e17be9e215a08fa',1,'update_render(sf::RenderWindow &amp;window):&#160;game_render.cc']]],
+  ['update_5fscore',['update_score',['../score__manager_8cc.html#ad26e807e88d5c3e14275515dc49f1ec9',1,'update_score():&#160;score_manager.cc'],['../score__manager_8h.html#ad26e807e88d5c3e14275515dc49f1ec9',1,'update_score():&#160;score_manager.cc']]]
+];

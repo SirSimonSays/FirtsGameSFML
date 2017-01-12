@@ -6,7 +6,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "game_manager.h"
 #include "key_handler.h"
 
 /**< max number of frame per second of the game.*/

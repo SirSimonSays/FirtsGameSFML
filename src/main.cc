@@ -1,10 +1,10 @@
-/** in this files there are the implementation of the functions of the ::main.h
+/** @file
+  * file that holds the main functions of the game.
+  * In this files there are the implementation of the functions of the ::main.h
   * file like ::setup() and ::main().
   */
 
 #include "main.h"
-
-using namespace std;
 
 /** the main function is the first executed after the launch of the program.
   * It returns 0 to says the program works great or an integer different from 0

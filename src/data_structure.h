@@ -11,6 +11,9 @@
 #include <SFML/Audio.hpp>
 #include <cstdlib>
 #include <iostream>
+#include <fstream>
+
+using namespace std;
 
 /**< default values of the dimension of the game screen.*/
 extern const int DEFAULT_X;

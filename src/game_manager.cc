@@ -1,4 +1,6 @@
-/** in this files there are the implementation of the functions of the ::game_manager.h
+/** @file
+  * file that handles the game state.
+  * In this files there are the implementation of the functions of the ::game_manager.h
   * file like ::init_game(), ::get_state(), ::change_game_state() and ::update_game().
   */
 
@@ -16,6 +18,7 @@ void init_game(){
     init_render();
     init_music();
     init_controls();
+    init_score();
 }
 
 /**< it returns the value of the state variables.*/

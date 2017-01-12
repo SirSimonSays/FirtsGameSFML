@@ -7,9 +7,8 @@
 #ifndef GAME_RENDER
 #define GAME_RENDER
 
-#include "debug.h"
-#include "data_structure.h"
 #include "game_manager.h"
+#include "score_manager.h"
 
 const int PLATFORMS_NUMBER = 10;
 const int PLATFORM_DIMENSION_X = 137;

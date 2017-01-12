@@ -6,8 +6,7 @@
 #ifndef GAME_OVER
 #define GAME_OVER
 
-#include "debug.h"
-#include "data_structure.h"
+#include "score_manager.h"
 
 const int DIM = 50;
 
