@@ -86,6 +86,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">data_structure.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>this file charges the SFML library and sets the variables shared from the other files because some functions of different files use the same variables.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
 <code>#include &lt;SFML/Audio.hpp&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
@@ -119,21 +122,25 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8">OVER</a>
 <br />
  }</td></tr>
+<tr class="memdesc:aaf29bbe309504beb4cfec2481eacee62"><td class="mdescLeft">&#160;</td><td class="mdescRight">possible state of the game.  <a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">More...</a><br /></td></tr>
 <tr class="separator:aaf29bbe309504beb4cfec2481eacee62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:aeef3e5e56bde24de52d8833a77bf48dc"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structure_8h.html#aeef3e5e56bde24de52d8833a77bf48dc">DEFAULT_X</a></td></tr>
-<tr class="memdesc:aeef3e5e56bde24de52d8833a77bf48dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; default values of the dimension of the game screen.  <a href="#aeef3e5e56bde24de52d8833a77bf48dc">More...</a><br /></td></tr>
+<tr class="memdesc:aeef3e5e56bde24de52d8833a77bf48dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">default values of the dimension of the game screen.  <a href="#aeef3e5e56bde24de52d8833a77bf48dc">More...</a><br /></td></tr>
 <tr class="separator:aeef3e5e56bde24de52d8833a77bf48dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4c4cd77d296f97bb82b4b8cd061eac3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structure_8h.html#ac4c4cd77d296f97bb82b4b8cd061eac3">DEFAULT_Y</a></td></tr>
 <tr class="memdesc:ac4c4cd77d296f97bb82b4b8cd061eac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">default dimension for the height of the windows.  <a href="#ac4c4cd77d296f97bb82b4b8cd061eac3">More...</a><br /></td></tr>
 <tr class="separator:ac4c4cd77d296f97bb82b4b8cd061eac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d354835cad461f09999bfceea320fc5"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="data__structure_8h.html#a6d354835cad461f09999bfceea320fc5">font</a></td></tr>
-<tr class="memdesc:a6d354835cad461f09999bfceea320fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">possible state of the game.  <a href="#a6d354835cad461f09999bfceea320fc5">More...</a><br /></td></tr>
+<tr class="memdesc:a6d354835cad461f09999bfceea320fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">font of the text of the game  <a href="#a6d354835cad461f09999bfceea320fc5">More...</a><br /></td></tr>
 <tr class="separator:a6d354835cad461f09999bfceea320fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>this file charges the SFML library and sets the variables shared from the other files because some functions of different files use the same variables. </p>
+<p>It also includes ::debug.h because it's used in all the other file for tracing the error. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="aaf29bbe309504beb4cfec2481eacee62"></a>
 <div class="memitem">
 <div class="memproto">
@@ -143,6 +150,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>possible state of the game. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b"></a>PLAY&#160;</td><td class="fielddoc">
 </td></tr>
@@ -155,12 +164,12 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8"></a>OVER&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b">PLAY</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721">MENU</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade">OPTION</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08">CONTROL</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8">OVER</a>};</div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade">OPTION</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8">OVER</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08">CONTROL</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b">PLAY</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721">MENU</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade">OPTION</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08">CONTROL</a>, <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8">OVER</a>};</div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a4c40e60bc71a32b924ce1f08d57f9721">MENU</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62a0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aa90a72437604db645f335d571993dade">OPTION</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62aee4b1697462879d869ff122fc694e9e8">OVER</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62af722a5faa36087c914da53ebe4711f08">CONTROL</a></div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -175,8 +184,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>&lt; default values of the dimension of the game screen. </p>
-<p>&lt; default values of the dimension of the game screen. </p>
+<p>default values of the dimension of the game screen. </p>
+<p>default values of the dimension of the game screen. </p>
 
 </div>
 </div>
@@ -204,14 +213,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>possible state of the game. </p>
+<p>font of the text of the game </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 14:38:42 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 23:42:15 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

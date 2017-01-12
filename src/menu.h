@@ -1,4 +1,6 @@
-/** in this files there are the functions of the ::menu that is the first
+/** @file
+  * declarations of variables and functions of menu file.
+  * in this files there are the functions of the ::menu that is the first
   * window of the game where the player have to choose from the items (play,
   * options and exit).
   */

@@ -10,11 +10,14 @@
 /** flag variable to store the state of the music, if it's turned on or off*/
 bool music_flag;
 
+/** text to draw how to come back to menu when user is in control state.*/
+static sf::Text flip_text;
+/** variable to made the flipping text. See the ::view_controls() function.*/
+static int i;
+
 /** the texture and the sprite for the controls image and also the music for the
   * menu the game and the game_over.
   */
-static sf::Text flip_text;
-static int i;
 static sf::Texture tControls;
 static sf::Sprite sControls;
 static sf::Music musicMenu, musicGame, musicOver;

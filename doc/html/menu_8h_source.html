@@ -84,38 +84,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="menu_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef MENU_H</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define MENU_H</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__render_8h.html">game_render.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controls__and__sounds_8h.html">controls_and_sounds.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="menu_8h.html#a4177be92735d5753b7a11cee11768909">   12</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a4177be92735d5753b7a11cee11768909">ITEMS_NUMBER</a> = 3;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">   13</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">OPTION_ITEMS_NUMBER</a> = 3;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a5cf20cf8f8b8d7c2aeaaea014d157583">init_menu</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a58bdef10f45dade7616ad29dac8fd0e1">update_menu</a>(sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a37569c0169be2404752af19df4b96735">update_option_menu</a>(sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a25bec7dc2d3b6c919d7b74a42c84f155">get_pressed_item</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a5ff5af2e918b8e18a0c361e614950333">move_down</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#affc7ddfab1be8c25fc74f48447c285b3">move_up</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="menu_8h_html_a201ecf9501a1bfacb59fec121291af19"><div class="ttname"><a href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">OPTION_ITEMS_NUMBER</a></div><div class="ttdeci">const int OPTION_ITEMS_NUMBER</div><div class="ttdef"><b>Definition:</b> menu.h:13</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MENU_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define MENU_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__render_8h.html">game_render.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controls__and__sounds_8h.html">controls_and_sounds.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="menu_8h.html#a4177be92735d5753b7a11cee11768909">   14</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a4177be92735d5753b7a11cee11768909">ITEMS_NUMBER</a> = 3;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">   15</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">OPTION_ITEMS_NUMBER</a> = 3;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a5cf20cf8f8b8d7c2aeaaea014d157583">init_menu</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a58bdef10f45dade7616ad29dac8fd0e1">update_menu</a>(sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a37569c0169be2404752af19df4b96735">update_option_menu</a>(sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="menu_8h.html#a25bec7dc2d3b6c919d7b74a42c84f155">get_pressed_item</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#a5ff5af2e918b8e18a0c361e614950333">move_down</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="menu_8h.html#affc7ddfab1be8c25fc74f48447c285b3">move_up</a>(<span class="keyword">enum</span> <a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="menu_8h_html_a201ecf9501a1bfacb59fec121291af19"><div class="ttname"><a href="menu_8h.html#a201ecf9501a1bfacb59fec121291af19">OPTION_ITEMS_NUMBER</a></div><div class="ttdeci">const int OPTION_ITEMS_NUMBER</div><div class="ttdef"><b>Definition:</b> menu.h:15</div></div>
 <div class="ttc" id="menu_8h_html_affc7ddfab1be8c25fc74f48447c285b3"><div class="ttname"><a href="menu_8h.html#affc7ddfab1be8c25fc74f48447c285b3">move_up</a></div><div class="ttdeci">void move_up(enum gameState)</div></div>
 <div class="ttc" id="menu_8h_html_a37569c0169be2404752af19df4b96735"><div class="ttname"><a href="menu_8h.html#a37569c0169be2404752af19df4b96735">update_option_menu</a></div><div class="ttdeci">void update_option_menu(sf::RenderWindow &amp;window)</div><div class="ttdoc">this functions allows to see the background image and the three items: volume, controls and back to m...</div><div class="ttdef"><b>Definition:</b> menu.cc:92</div></div>
 <div class="ttc" id="menu_8h_html_a5cf20cf8f8b8d7c2aeaaea014d157583"><div class="ttname"><a href="menu_8h.html#a5cf20cf8f8b8d7c2aeaaea014d157583">init_menu</a></div><div class="ttdeci">void init_menu()</div><div class="ttdoc">init_menu is uses to set the background image of the menu, the font of the menu text and to charges t...</div><div class="ttdef"><b>Definition:</b> menu.cc:26</div></div>
 <div class="ttc" id="menu_8h_html_a58bdef10f45dade7616ad29dac8fd0e1"><div class="ttname"><a href="menu_8h.html#a58bdef10f45dade7616ad29dac8fd0e1">update_menu</a></div><div class="ttdeci">void update_menu(sf::RenderWindow &amp;window)</div><div class="ttdoc">this functions allows to see the background image and the three items: play, options and exit...</div><div class="ttdef"><b>Definition:</b> menu.cc:69</div></div>
-<div class="ttc" id="menu_8h_html_a4177be92735d5753b7a11cee11768909"><div class="ttname"><a href="menu_8h.html#a4177be92735d5753b7a11cee11768909">ITEMS_NUMBER</a></div><div class="ttdeci">const int ITEMS_NUMBER</div><div class="ttdoc">in this files there are the functions of the ::menu that is the first window of the game where the pl...</div><div class="ttdef"><b>Definition:</b> menu.h:12</div></div>
+<div class="ttc" id="menu_8h_html_a4177be92735d5753b7a11cee11768909"><div class="ttname"><a href="menu_8h.html#a4177be92735d5753b7a11cee11768909">ITEMS_NUMBER</a></div><div class="ttdeci">const int ITEMS_NUMBER</div><div class="ttdef"><b>Definition:</b> menu.h:14</div></div>
 <div class="ttc" id="menu_8h_html_a25bec7dc2d3b6c919d7b74a42c84f155"><div class="ttname"><a href="menu_8h.html#a25bec7dc2d3b6c919d7b74a42c84f155">get_pressed_item</a></div><div class="ttdeci">int get_pressed_item(enum gameState)</div></div>
-<div class="ttc" id="game__render_8h_html"><div class="ttname"><a href="game__render_8h.html">game_render.h</a></div></div>
+<div class="ttc" id="game__render_8h_html"><div class="ttname"><a href="game__render_8h.html">game_render.h</a></div><div class="ttdoc">declarations of variables and functions of game_render file. </div></div>
 <div class="ttc" id="menu_8h_html_a5ff5af2e918b8e18a0c361e614950333"><div class="ttname"><a href="menu_8h.html#a5ff5af2e918b8e18a0c361e614950333">move_down</a></div><div class="ttdeci">void move_down(enum gameState)</div></div>
-<div class="ttc" id="controls__and__sounds_8h_html"><div class="ttname"><a href="controls__and__sounds_8h.html">controls_and_sounds.h</a></div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a></div><div class="ttdeci">gameState</div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
+<div class="ttc" id="controls__and__sounds_8h_html"><div class="ttname"><a href="controls__and__sounds_8h.html">controls_and_sounds.h</a></div><div class="ttdoc">declarations of variables and functions of controls_and_sounds file. </div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a></div><div class="ttdeci">gameState</div><div class="ttdoc">possible state of the game. </div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 14:38:42 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 23:42:15 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

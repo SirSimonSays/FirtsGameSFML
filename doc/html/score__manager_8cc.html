@@ -130,18 +130,18 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>it returns the value write on file score.txt </p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    file_in.open(<a class="code" href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span>(!file_in){</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a>(<span class="stringliteral">&quot;error while opening file_in&quot;</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        file_in&gt;&gt;buffer;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        file_in.close();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)buffer;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="ttc" id="score__manager_8h_html_aa86bd5c868cdcab1534507a2919264fa"><div class="ttname"><a href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a></div><div class="ttdeci">const char FILE_NAME[]</div><div class="ttdoc">this file includes all the other files that will be used into the ::score_manager.cc file and declares the functions of this file like init_score(), update_score(), getBestScore() and set_best_score(). </div><div class="ttdef"><b>Definition:</b> score_manager.h:13</div></div>
-<div class="ttc" id="debug_8h_html_af9daf8fa9b1aa8d19df9e06f33871a7e"><div class="ttname"><a href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a></div><div class="ttdeci">#define DEB(a)</div><div class="ttdoc">this macro is defined to make an output on the terminal to allow the developers to check the value of...</div><div class="ttdef"><b>Definition:</b> debug.h:10</div></div>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    file_in.open(<a class="code" href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(!file_in){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a>(<span class="stringliteral">&quot;error while opening file_in&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        file_in&gt;&gt;buffer;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        file_in.close();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)buffer;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="ttc" id="score__manager_8h_html_aa86bd5c868cdcab1534507a2919264fa"><div class="ttname"><a href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a></div><div class="ttdeci">const char FILE_NAME[]</div><div class="ttdoc">the name of the file where the score is store. </div><div class="ttdef"><b>Definition:</b> score_manager.h:15</div></div>
+<div class="ttc" id="debug_8h_html_af9daf8fa9b1aa8d19df9e06f33871a7e"><div class="ttname"><a href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a></div><div class="ttdeci">#define DEB(a)</div><div class="ttdoc">this macro is defined to make an output on the terminal to allow the developers to check the value of...</div><div class="ttdef"><b>Definition:</b> debug.h:11</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -159,10 +159,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>set the deafult value of score variable. </p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                 {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    score = <a class="code" href="score__manager_8h.html#a6f365d709ea9cd82354dfaed317718ed">NO_SCORE</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="score__manager_8h_html_a6f365d709ea9cd82354dfaed317718ed"><div class="ttname"><a href="score__manager_8h.html#a6f365d709ea9cd82354dfaed317718ed">NO_SCORE</a></div><div class="ttdeci">const int NO_SCORE</div><div class="ttdoc">the start value of the score variables at the start of the game. </div><div class="ttdef"><b>Definition:</b> score_manager.h:15</div></div>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                 {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    score = <a class="code" href="score__manager_8h.html#a6f365d709ea9cd82354dfaed317718ed">NO_SCORE</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="ttc" id="score__manager_8h_html_a6f365d709ea9cd82354dfaed317718ed"><div class="ttname"><a href="score__manager_8h.html#a6f365d709ea9cd82354dfaed317718ed">NO_SCORE</a></div><div class="ttdeci">const int NO_SCORE</div><div class="ttdoc">the start value of the score variables at the start of the game. </div><div class="ttdef"><b>Definition:</b> score_manager.h:17</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -180,24 +180,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>it checks if the score write on the file is lower than the current score then it overwrites the score on the file and sets it like the best. </p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                     {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="score__manager_8cc.html#a77b6493d710dc620fa9cfab566e8d74a">get_best_score</a>() &lt; score){</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        file_out.open(<a class="code" href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">if</span>(!file_out){</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a>(<span class="stringliteral">&quot;error while opening file_out&quot;</span>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        file_out&lt;&lt;score;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        file_out.close();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="ttc" id="score__manager_8h_html_aa86bd5c868cdcab1534507a2919264fa"><div class="ttname"><a href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a></div><div class="ttdeci">const char FILE_NAME[]</div><div class="ttdoc">this file includes all the other files that will be used into the ::score_manager.cc file and declares the functions of this file like init_score(), update_score(), getBestScore() and set_best_score(). </div><div class="ttdef"><b>Definition:</b> score_manager.h:13</div></div>
-<div class="ttc" id="debug_8h_html_af9daf8fa9b1aa8d19df9e06f33871a7e"><div class="ttname"><a href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a></div><div class="ttdeci">#define DEB(a)</div><div class="ttdoc">this macro is defined to make an output on the terminal to allow the developers to check the value of...</div><div class="ttdef"><b>Definition:</b> debug.h:10</div></div>
-<div class="ttc" id="score__manager_8cc_html_a77b6493d710dc620fa9cfab566e8d74a"><div class="ttname"><a href="score__manager_8cc.html#a77b6493d710dc620fa9cfab566e8d74a">get_best_score</a></div><div class="ttdeci">int get_best_score()</div><div class="ttdoc">it returns the value write on file score.txt </div><div class="ttdef"><b>Definition:</b> score_manager.cc:26</div></div>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                     {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="score__manager_8cc.html#a77b6493d710dc620fa9cfab566e8d74a">get_best_score</a>() &lt; score){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        file_out.open(<a class="code" href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(!file_out){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a>(<span class="stringliteral">&quot;error while opening file_out&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        file_out&lt;&lt;score;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        file_out.close();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="score__manager_8h_html_aa86bd5c868cdcab1534507a2919264fa"><div class="ttname"><a href="score__manager_8h.html#aa86bd5c868cdcab1534507a2919264fa">FILE_NAME</a></div><div class="ttdeci">const char FILE_NAME[]</div><div class="ttdoc">the name of the file where the score is store. </div><div class="ttdef"><b>Definition:</b> score_manager.h:15</div></div>
+<div class="ttc" id="debug_8h_html_af9daf8fa9b1aa8d19df9e06f33871a7e"><div class="ttname"><a href="debug_8h.html#af9daf8fa9b1aa8d19df9e06f33871a7e">DEB</a></div><div class="ttdeci">#define DEB(a)</div><div class="ttdoc">this macro is defined to make an output on the terminal to allow the developers to check the value of...</div><div class="ttdef"><b>Definition:</b> debug.h:11</div></div>
+<div class="ttc" id="score__manager_8cc_html_a77b6493d710dc620fa9cfab566e8d74a"><div class="ttname"><a href="score__manager_8cc.html#a77b6493d710dc620fa9cfab566e8d74a">get_best_score</a></div><div class="ttdeci">int get_best_score()</div><div class="ttdoc">it returns the value write on file score.txt </div><div class="ttdef"><b>Definition:</b> score_manager.cc:29</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -215,16 +215,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>inrement the value of score. </p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                   {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    score ++;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                   {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    score ++;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 14:38:42 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 23:42:15 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

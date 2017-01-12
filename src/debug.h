@@ -1,6 +1,7 @@
-/* this file allows a simple method of tracing. In this way the developers can
- * find the errors quickly and fix them better.
- */
+/** @file
+  * this file allows a simple method of tracing. In this way the developers can
+  * find the errors quickly and fix them better.
+  */
 
 #ifndef DEBUG_H
 #define DEBUG_H

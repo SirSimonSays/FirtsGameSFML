@@ -84,29 +84,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="game__manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef GAME_MANAGER</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define GAME_MANAGER</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="menu_8h.html">menu.h</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__over_8h.html">game_over.h</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#a43344c9fbe4022056e87cbf2a1a77e87">init_game</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a> <a class="code" href="game__manager_8h.html#a26ef537bf6563d18266921985dbefbbd">get_state</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#adf7c76956501fabb6c1e8794434c3b2c">change_game_state</a>(<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a> s);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c">update_game</a>(sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="game__manager_8h_html_a43344c9fbe4022056e87cbf2a1a77e87"><div class="ttname"><a href="game__manager_8h.html#a43344c9fbe4022056e87cbf2a1a77e87">init_game</a></div><div class="ttdeci">void init_game()</div><div class="ttdoc">this file includes all the other files that will be used into the ::game_manager.cc file and declares...</div><div class="ttdef"><b>Definition:</b> game_manager.cc:14</div></div>
-<div class="ttc" id="game__manager_8h_html_a8a18ec37c37f3c0ba7ba4874bbc3d04c"><div class="ttname"><a href="game__manager_8h.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c">update_game</a></div><div class="ttdeci">void update_game(sf::RenderWindow &amp;window)</div><div class="ttdoc">this function updates the whole game depending on the state of it. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:38</div></div>
-<div class="ttc" id="game__over_8h_html"><div class="ttname"><a href="game__over_8h.html">game_over.h</a></div></div>
-<div class="ttc" id="menu_8h_html"><div class="ttname"><a href="menu_8h.html">menu.h</a></div></div>
-<div class="ttc" id="game__manager_8h_html_a26ef537bf6563d18266921985dbefbbd"><div class="ttname"><a href="game__manager_8h.html#a26ef537bf6563d18266921985dbefbbd">get_state</a></div><div class="ttdeci">gameState get_state()</div><div class="ttdoc">it changes the value of state with the parameter s. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:25</div></div>
-<div class="ttc" id="game__manager_8h_html_adf7c76956501fabb6c1e8794434c3b2c"><div class="ttname"><a href="game__manager_8h.html#adf7c76956501fabb6c1e8794434c3b2c">change_game_state</a></div><div class="ttdeci">void change_game_state(gameState s)</div><div class="ttdef"><b>Definition:</b> game_manager.cc:30</div></div>
-<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a></div><div class="ttdeci">gameState</div><div class="ttdef"><b>Definition:</b> data_structure.h:25</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef GAME_MANAGER</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define GAME_MANAGER</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="menu_8h.html">menu.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__over_8h.html">game_over.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#a43344c9fbe4022056e87cbf2a1a77e87">init_game</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a> <a class="code" href="game__manager_8h.html#a26ef537bf6563d18266921985dbefbbd">get_state</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#adf7c76956501fabb6c1e8794434c3b2c">change_game_state</a>(<a class="code" href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a> s);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="game__manager_8h.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c">update_game</a>(sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="game__manager_8h_html_a43344c9fbe4022056e87cbf2a1a77e87"><div class="ttname"><a href="game__manager_8h.html#a43344c9fbe4022056e87cbf2a1a77e87">init_game</a></div><div class="ttdeci">void init_game()</div><div class="ttdoc">function to setup all the variables to make the whole program works properly. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:14</div></div>
+<div class="ttc" id="game__manager_8h_html_a8a18ec37c37f3c0ba7ba4874bbc3d04c"><div class="ttname"><a href="game__manager_8h.html#a8a18ec37c37f3c0ba7ba4874bbc3d04c">update_game</a></div><div class="ttdeci">void update_game(sf::RenderWindow &amp;window)</div><div class="ttdoc">this function updates the whole game depending on the state of it. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:37</div></div>
+<div class="ttc" id="game__over_8h_html"><div class="ttname"><a href="game__over_8h.html">game_over.h</a></div><div class="ttdoc">declarations of variables and functions of game_over file. </div></div>
+<div class="ttc" id="menu_8h_html"><div class="ttname"><a href="menu_8h.html">menu.h</a></div><div class="ttdoc">declarations of variables and functions of menu file. </div></div>
+<div class="ttc" id="game__manager_8h_html_a26ef537bf6563d18266921985dbefbbd"><div class="ttname"><a href="game__manager_8h.html#a26ef537bf6563d18266921985dbefbbd">get_state</a></div><div class="ttdeci">gameState get_state()</div><div class="ttdoc">it returns the value of the state variables. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:24</div></div>
+<div class="ttc" id="game__manager_8h_html_adf7c76956501fabb6c1e8794434c3b2c"><div class="ttname"><a href="game__manager_8h.html#adf7c76956501fabb6c1e8794434c3b2c">change_game_state</a></div><div class="ttdeci">void change_game_state(gameState s)</div><div class="ttdoc">it changes the value of state with the parameter s. </div><div class="ttdef"><b>Definition:</b> game_manager.cc:29</div></div>
+<div class="ttc" id="data__structure_8h_html_aaf29bbe309504beb4cfec2481eacee62"><div class="ttname"><a href="data__structure_8h.html#aaf29bbe309504beb4cfec2481eacee62">gameState</a></div><div class="ttdeci">gameState</div><div class="ttdoc">possible state of the game. </div><div class="ttdef"><b>Definition:</b> data_structure.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 14:38:42 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 23:42:15 for FreeFall by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

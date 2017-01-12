@@ -1,4 +1,6 @@
-/** this file includes all the other files that will be used into the
+/** @file
+  * declarations of variables and functions of game_manager file.
+  * this file includes all the other files that will be used into the
   * ::game_manager.cc file and declares the functions of this file like
   * ::init_game(), ::get_state(), ::change_game_state() and ::update_game().
   */

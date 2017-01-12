@@ -1,4 +1,6 @@
-/** this file includes all the other files that will be used into the
+/** @file
+  * declarations of variables and functions of controls_and_sounds file.
+  * this file includes all the other files that will be used into the
   * ::controls_and_sounds.cc file and declares the functions of this file like
   * ::init_music(), ::update_music(), ::init_controls() and ::view_controls().
   */

@@ -36,7 +36,7 @@ static float dy;
 static sf::SoundBuffer buffer_glide;
 static sf::Sound sound_glide;
 
-/** */
+/** clock variable to scan time to update the position of the platforms.*/
 static sf::Clock scrolling_clock;
 
 /** ::init_render is uses to set at his initial value all the variables of this
@@ -78,6 +78,7 @@ void init_render(){
     sound_glide.setBuffer(buffer_glide);
 
     resume_flag = false;
+    init_score();
 }
 
 /** ::random_platform() makes random number for the position of the platform

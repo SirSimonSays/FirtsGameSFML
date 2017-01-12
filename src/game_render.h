@@ -1,4 +1,6 @@
-/** this file includes all the other files that will be used into the
+/** @file
+  * declarations of variables and functions of game_render file.
+  * this file includes all the other files that will be used into the
   * ::game_render.cc file and declares the functions of this file like
   * ::init_render() and ::random_platform(), ::update_render() and ::move_player(),
   * ::animation(), ::glide_player(), ::collision(), ::scroll_platforms().
@@ -16,6 +18,7 @@ const int PLATFORM_DIMENSION_Y = 30;
 const float PLATFORMS_SPEED = 1.8;
 const int PLAYER_DIMENSION = 40;
 
+/** the player's states, them are necessary for the animation of the player.*/
 enum player_state {RUN, JUMP, FLY, DEATH};
 
 extern bool resume_flag;

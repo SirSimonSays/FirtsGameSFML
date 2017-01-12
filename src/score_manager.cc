@@ -6,10 +6,13 @@
 
 #include "score_manager.h"
 
-/** */
+/** current score of the player*/
 static int score;
+/** buffer to read the score from file*/
 static char buffer;
+/** unformatted output to write into the file ::score.txt*/
 static ofstream file_out;
+/** unformatted input to read from file ::score.txt*/
 static ifstream file_in;
 
 /** set the deafult value of score variable.*/

@@ -16,12 +16,19 @@ Resources:
         google.com
 
 How to play:
-  Compile:
-      make
-  Clean:
-      make clean
-      make cleanall
-  Dependencies:
-      make dependencies
-  Play:
-      ./exe
+    First you have to install SFML libraries by "sudo apt-get install libsfml-dev" command.
+    Then you can choose from one of this commands to write into the /src folder.
+    Compile:
+        make
+    Clean:
+        make clean
+        make cleanall
+    Dependencies:
+        make dependencies
+    Play:
+        ./exe
+
+Bug:
+    the biggest bug is on the score's assignment because it counts the number of platforms
+    with whom the player collides but a collision with a platform doesn't correspond to a single collision;
+    it depend's on how many cycles there are while you are on the platform.

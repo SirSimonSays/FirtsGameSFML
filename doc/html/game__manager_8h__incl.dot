@@ -4,16 +4,16 @@ digraph "game_manager.h"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="game_manager.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="menu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html"];
+  Node2 [label="menu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html",tooltip="declarations of variables and functions of menu file. "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="game_render.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__render_8h.html"];
+  Node3 [label="game_render.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__render_8h.html",tooltip="declarations of variables and functions of game_render file. "];
   Node3 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="score_manager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$score__manager_8h.html"];
+  Node4 [label="score_manager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$score__manager_8h.html",tooltip="declarations of variables and functions of score_manager file. "];
   Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="debug.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8h.html"];
+  Node5 [label="debug.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$debug_8h.html",tooltip="this file allows a simple method of tracing. "];
   Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node6 [label="data_structure.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$data__structure_8h.html"];
+  Node6 [label="data_structure.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$data__structure_8h.html",tooltip="this file charges the SFML library and sets the variables shared from the other files because some fu..."];
   Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 [label="SFML/Graphics.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -25,11 +25,11 @@ digraph "game_manager.h"
   Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node11 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="controls_and_sounds.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$controls__and__sounds_8h.html"];
+  Node12 [label="controls_and_sounds.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$controls__and__sounds_8h.html",tooltip="declarations of variables and functions of controls_and_sounds file. "];
   Node12 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node12 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node13 [label="game_over.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__over_8h.html"];
+  Node13 [label="game_over.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$game__over_8h.html",tooltip="declarations of variables and functions of game_over file. "];
   Node13 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

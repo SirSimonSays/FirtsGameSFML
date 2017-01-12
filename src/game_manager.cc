@@ -18,15 +18,14 @@ void init_game(){
     init_render();
     init_music();
     init_controls();
-    init_score();
 }
 
-/**< it returns the value of the state variables.*/
+/** it returns the value of the state variables.*/
 gameState get_state(){
     return state;
 }
 
-/**< it changes the value of state with the parameter s.*/
+/** it changes the value of state with the parameter s.*/
 void change_game_state(gameState s){
     state = s;
     update_music(state);
