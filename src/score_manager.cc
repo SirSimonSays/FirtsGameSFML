@@ -20,7 +20,7 @@ void init_score(){
     score = NO_SCORE;
 }
 
-/** inrement the value of score.*/
+/** increment the value of score.*/
 void update_score(){
     score ++;
 }

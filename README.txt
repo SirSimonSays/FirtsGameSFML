@@ -28,7 +28,13 @@ How to play:
     Play:
         ./exe
 
+Documentiation:
+    the documentation is made with the help of Doxygen and you can find it in the /doc/html
+    folder. If you open the index.html file you'll find a html page where is explain all
+    about the game and the code.
+
 Bug:
     the biggest bug is on the score's assignment because it counts the number of platforms
-    with whom the player collides but a collision with a platform doesn't correspond to a single collision;
+    with whom the player collides but a collision with a platform doesn't correspond to a single
+    collision;
     it depend's on how many cycles there are while you are on the platform.
