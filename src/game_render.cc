@@ -20,16 +20,16 @@ struct point{
 bool resume_flag, pl_direction;
 player_state pl_state;
 
-/** declaration of the three main image of the game.
-  * ::random_arr stores random position to draw platforms with random position
-  * on the screen. ::player position stores the position of the player to move
-  * it. The two variables ::dx and ::dy are the changing time, like a little
-  * lapse of time.
-  */
+/** declaration of the three main image of the game.*/
 static sf::Texture tPlayer, tPlatform, tBackground;
 static sf::Sprite sPlayer, sPlatform, sBackground;
+/** ::random_arr stores random position to draw platforms with random position
+  * on the screen.
+  */
 static point random_arr[PLATFORMS_NUMBER];
+/** ::player position stores the position of the player to move.*/
 static point player_position;
+/** ::dy is the changing time, like a little lapse of time.*/
 static float dy;
 
 /** declaration of the glide sound.*/
@@ -38,6 +38,10 @@ static sf::Sound sound_glide;
 
 /** clock variable to scan time to update the position of the platforms.*/
 static sf::Clock scrolling_clock;
+
+/** the animation counter.*/
+static int animation_number;
+
 
 /** ::init_render is uses to set at his initial value all the variables of this
   * file to start to work properly. It also charges all the images and set the
@@ -56,7 +60,8 @@ void init_render(){
     pl_direction = false;
     sPlayer.setTexture(tPlayer);
     sPlayer.setPosition(player_position.x, player_position.y);
-    animation(pl_state, pl_direction);
+    animation_number = 0;
+    animation(pl_state, pl_direction, animation_number);
 
     /** charge the background image.*/
     if(!tBackground.loadFromFile("../media/sBackground.png"))
@@ -107,7 +112,7 @@ void update_render(sf::RenderWindow &window){
     dy += 0.2;
     player_position.y += dy;
     if(!collision())
-        animation(FLY, pl_direction);
+        animation(FLY, pl_direction, 0);
 
     /** let the background slide every 0.01 seconds*/
     if(scrolling_clock.getElapsedTime().asSeconds() > 0.01)
@@ -132,12 +137,12 @@ void move_player(bool dir){
     if(get_state() == PLAY){
         if(dir && player_position.x > 3){
             pl_direction = dir;
-            animation(pl_state, pl_direction);
+            animation(pl_state, pl_direction, 1);
             player_position.x -= 6;
         }else{
             if(player_position.x < DEFAULT_X - PLAYER_DIMENSION){
                 pl_direction = false;
-                animation(pl_state, pl_direction);
+                animation(pl_state, pl_direction, 1);
                 player_position.x += 6;
             }
         }
@@ -149,22 +154,34 @@ void move_player(bool dir){
   */
 void glide_player(){
     if(get_state() == PLAY && pl_state != RUN){
-        animation(JUMP, pl_direction);
+        animation(JUMP, pl_direction, 2);
         dy -= 2;
         sound_glide.play();
     }
 }
 
 /** checks if the direction is right or left and selects the right rectangle
-  * multiplying the ::PLAYER_DIMENSION for the ::pl_state.
+  * multiplying the ::PLAYER_DIMENSION for the ::pl_state. It also checks the ::animation_number
+  * because at every cycle it has to draw a different rectangle of the sprite, for the flip technic
+  * is necessary to start from ::PLAYER_DIMENSION and that's the reason why there's an
+  * if in the else condition.
   */
-void animation(player_state p, bool direction){
+void animation(player_state p, bool direction, int number){
     pl_state = p;
-    if(!direction)
-          sPlayer.setTextureRect(sf::IntRect(0, PLAYER_DIMENSION * pl_state, PLAYER_DIMENSION, PLAYER_DIMENSION));
+
+    if(animation_number < number)
+        animation_number++;
     else
+        animation_number = 0;
+
+    if(!direction)
+          sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION * animation_number, PLAYER_DIMENSION * pl_state, PLAYER_DIMENSION, PLAYER_DIMENSION));
+    else{
           /** technic to flip the sprite*/
-          sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION, PLAYER_DIMENSION * pl_state, -PLAYER_DIMENSION, PLAYER_DIMENSION));
+          if(animation_number == 0)
+              animation_number++;
+          sPlayer.setTextureRect(sf::IntRect(PLAYER_DIMENSION * animation_number, PLAYER_DIMENSION * pl_state, -PLAYER_DIMENSION, PLAYER_DIMENSION));
+    }
 }
 
 /** this function checks if the player collides with the top and the bottom of
@@ -175,7 +192,7 @@ bool collision(){
     /** checks if the player collides at the top or bottom.*/
     if(player_position.y > DEFAULT_Y - PLAYER_DIMENSION ||
        player_position.y < 0){
-        animation(DEATH, pl_direction);
+        animation(DEATH, pl_direction, 1);
         dy = 0;
         resume_flag = false;
         change_game_state(OVER);
@@ -185,7 +202,7 @@ bool collision(){
     /** checks if the player collides with the platforms.*/
     for(int i = 0; i < PLATFORMS_NUMBER; i++){
         if(sPlayer.getGlobalBounds().intersects(sf::FloatRect(random_arr[i].x, random_arr[i].y, PLATFORM_DIMENSION_X, PLATFORM_DIMENSION_Y))){
-            animation(RUN, pl_direction);
+            animation(RUN, pl_direction, 4);
             dy = -PLATFORMS_SPEED;
             update_score();
             return true;

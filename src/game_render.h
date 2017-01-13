@@ -28,7 +28,7 @@ void random_platform();
 void update_render(sf::RenderWindow &window);
 void move_player(bool dir);
 void glide_player();
-void animation(player_state p, bool direction);
+void animation(player_state p, bool direction, int number);
 bool collision();
 void scroll_platforms();
 
