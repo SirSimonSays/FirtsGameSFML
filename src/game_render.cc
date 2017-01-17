@@ -126,6 +126,7 @@ void update_render(sf::RenderWindow &window){
         sPlatform.setPosition(random_arr[i].x, random_arr[i].y);
         window.draw(sPlatform);
     }
+    window.draw(view_score());
 
     window.display();
 }
@@ -192,7 +193,7 @@ bool collision(){
     /** checks if the player collides at the top or bottom.*/
     if(player_position.y > DEFAULT_Y - PLAYER_DIMENSION ||
        player_position.y < 0){
-        animation(DEATH, pl_direction, 1);
+        animation(DEATH, pl_direction, 0);
         dy = 0;
         resume_flag = false;
         change_game_state(OVER);

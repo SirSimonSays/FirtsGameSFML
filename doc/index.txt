@@ -1,0 +1,70 @@
+<!-- contents -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FreeFall </div>  </div>
+</div>
+<div class="contents">
+<div class="textblock"><p>Endless easy game based on C++ and SFML libraries.<br/> It's simple and funny at the same time because it takes Super Mario Bros and remake with him a new spectacular season never seen before.<br/>A small introduction is made in the file <a href="../../README.txt">README.txt</a> where you can find all about how to play and other things on the making of the game.
+</p>
+<div class="image">
+<img src="../../media/logo.png" alt="../../media/logo.png"/>
+</div><br/>
+<p>The main <b>states</b> of the game are:</p>
+<p><b>PLAY<br/>
+ MENU<br/>
+ OPTION<br/>
+ CONTROL<br/>
+ OVER</b></p>
+<br/>
+<p>The game is split in the next 10 modules: </p>
+<ul>
+<li><a href="data__structure_8h.html">data_structure</a>: <br/>
+resources manager for all the global variables.</li>
+</ul>
+<ul>
+<li><a href="game__manager_8h.html">game_manager</a>: <br/>
+there are the implementation of the function to setup all the variables to make the whole program works properly and switch from the different state.</li>
+</ul>
+<ul>
+<li><a href="game__render_8h.html">game_render</a>: <br/>
+there are the implementation of the functions to update the player position and the rendering of the image in the PLAY state game.</li>
+</ul>
+<ul>
+<li><a href="game__over_8h.html">game_over</a>: <br/>
+there are the implementation of the DEATH state game, that freezes the window.</li>
+</ul>
+<ul>
+<li><a href="key__handler_8h.html">key_handler</a>: <br/>
+this is the manager of keyboard input that combine a key with a function.</li>
+</ul>
+<ul>
+<li><a href="menu_8h.html">menu</a>: <br/>
+this is the menu manager that welcomes the user and allows to him to select one of the menu voices.</li>
+</ul>
+<ul>
+<li><a href="controls__and__sounds_8h.html">controls_and_sounds</a>: <br/>
+there are the implementation of the functions to play, pause and switch from different music and view a simple image to instruct the user on which controls he can use.</li>
+</ul>
+<ul>
+<li><a href="score__manager_8h.html">score_manager</a>: <br/>
+score manager that saves the current score of the game on a file.</li>
+</ul>
+<ul>
+<li><a href="main_8h.html">main</a>: <br/>
+there are the implementation of the functions setup() and main(). It also declares the variables like FPS and main window.</li>
+</ul>
+<ul>
+<li><a href="debug_8h.html">debug</a>: <br/>
+this file stores the defines of the game to handles the debug of the game.</li>
+</ul><br/><br/>
+<p align="center">Let's have a look at the <b>controls</b> before start! </p>
+<div class="image">
+<img src="../../media/sControl.jpg" alt="../../media/sControl.jpg"/>
+</div><br/><br/>
+<p align="center"><b> DEPENDENCIES DIAGRAM : </b> </p>
+<div class="image">
+<img src="../../media/dependencies_tree.png" alt="../../media/dependencies_tree.png"/>
+</div><br/><br/><br/>
+<pre>Made for the advanced programming exam by Simone Cavana 							      UNIMORE - university of Modena and Reggio emilia</pre><br/>
+
+</div></div><!-- contents -->

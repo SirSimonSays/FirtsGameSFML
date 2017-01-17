@@ -13,4 +13,6 @@ digraph "data_structure.h"
   Node5 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }
