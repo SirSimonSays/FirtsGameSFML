@@ -28,6 +28,7 @@ gameState get_state(){
 /** it changes the value of state with the parameter s.*/
 void change_game_state(gameState s){
     state = s;
+    DBG(cout<<"change state"<<state<<endl);
     update_music(state);
 }
 
